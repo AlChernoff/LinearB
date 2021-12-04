@@ -1,0 +1,7 @@
+version: "3.3"
+
+services:
+  web:
+    image: my_test_cont:latest
+    ports:
+      - "8001:8001"

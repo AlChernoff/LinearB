@@ -1,0 +1,73 @@
+[
+  { "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "username": "admin",
+      "password": "pbkdf2_sha256$10000$vkRy7QauoLLj$ry+3xm3YX+YrSXbri8s3EcXDIrx5ceM+xQjtpLdw2oE=",
+      "is_superuser": true,
+      "is_staff": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "atm_api.inventory",
+    "pk": 1,
+    "fields": {
+      "type": "BILL",
+      "value": 200.0,
+      "amount": 7
+    }
+  },
+  {
+    "model": "atm_api.inventory",
+    "pk": 2,
+    "fields": {
+      "type": "BILL",
+      "value": 100.0,
+      "amount": 4
+    }
+  },
+  {
+    "model": "atm_api.inventory",
+    "pk": 3,
+    "fields": {
+      "type": "COIN",
+      "value": 10.0,
+      "amount": 0
+    }
+  },
+  {
+    "model": "atm_api.inventory",
+    "pk": 4,
+    "fields": {
+      "type": "COIN",
+      "value": 5.0,
+      "amount": 1
+    }
+  },
+  {
+    "model": "atm_api.inventory",
+    "pk": 5,
+    "fields": {
+      "type": "COIN",
+      "value": 0.1,
+      "amount": 12
+    }
+  },
+  {
+    "model": "atm_api.inventory",
+    "pk": 6,
+    "fields": {
+      "type": "COIN",
+      "value": 0.01,
+      "amount": 21
+    }
+  },
+  {
+    "model": "atm_api.currency",
+    "pk": 1,
+    "fields": {
+      "name": "EUR"
+    }
+  }
+]
