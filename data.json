@@ -67,7 +67,16 @@
     "model": "atm_api.currency",
     "pk": 1,
     "fields": {
-      "name": "EUR"
+      "currency": "EUR",
+      "rate": 1.4
+    }
+  },
+  {
+    "model": "atm_api.currency",
+    "pk": 2,
+    "fields": {
+      "currency": "NIS",
+      "rate": 1.0
     }
   }
 ]

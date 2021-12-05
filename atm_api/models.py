@@ -4,16 +4,17 @@ from django.db import models
 
 
 # # Create your models here.
-# class Withdrawl(models.Model):
-#     currency = models.CharField(max_length=5, blank=False, default='')
-#     amount = models.DecimalField(max_digits=5, blank=False, default='', decimal_places=2)
-#
+class Withdrawl(models.Model):
+    currency = models.CharField(max_length=5, blank=False, default='')
+    amount = models.DecimalField(max_digits=5, blank=False, default='', decimal_places=2)
+
 from atm_api.Exceptions.TooMuchCoinsException import TooMuchCoinsException
 
 BILL = 'BILL'
 COIN = 'COIN'
 INVENTORY_TYPES = [
     (BILL,"BILL"), (COIN, "COIN")]
+
 
 
 class Inventory(models.Model):
@@ -54,6 +55,10 @@ class Inventory(models.Model):
 class Currency(models.Model):
     currency = models.CharField(max_length=8, blank=False, null=False)  # UNIQUE
     rate = models.DecimalField(max_digits=6,decimal_places=2, blank=False, null=False)
+
+    @classmethod
+    def get_currency(cls, currency: str) -> str:
+        return cls.objects.filter(currency=currency).first()
 
     @classmethod
     def get_currency_rate(cls, currency: str) -> float:
